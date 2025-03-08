@@ -1,0 +1,42 @@
+site_name: Science Museum Portfolio
+site_url: https://wware.github.io
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - content.tabs.link
+    - content.code.annotate
+  palette: 
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: lime
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: pink
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+
+plugins:
+  - search
+  - mermaid2
+
+nav:
+  - Home: index.md
+  - Floor Plan: floor_plan.md
+  - Exhibits:
+    - Functional Programming: exhibits/fp-lab.md
+    - DevOps Observatory: exhibits/devops.md
+    - Embedded Systems: exhibits/embedded.md
+  - Research Papers: papers.md
+  - Visitor Logs: logs.md
+
+repo_url: https://github.com/wware/portfolio
