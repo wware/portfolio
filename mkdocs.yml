@@ -1,5 +1,6 @@
 site_name: Science Museum Portfolio
-site_url: https://wware.github.io
+# site_url: https://wware.github.io
+site_url: http://localhost:8000/
 
 theme:
   name: material
@@ -19,11 +20,11 @@ theme:
       accent: pink
 
 markdown_extensions:
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.superfences
+  - pymdownx.snippets
+
+extra_javascript:
+  - javascripts/extra.js
 
 plugins:
   - search
@@ -38,5 +39,6 @@ nav:
     - Embedded Systems: exhibits/embedded.md
   - Research Papers: papers.md
   - Visitor Logs: logs.md
+  - Items Demo: example.md
 
 repo_url: https://github.com/wware/portfolio

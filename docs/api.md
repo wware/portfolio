@@ -139,3 +139,38 @@ While you can't directly embed React components into Markdown, you can achieve d
 
 By combining FastAPI for your data API and careful JavaScript or React integration, you can create a dynamic and interactive MkDocs website.
 
+## More about FastAPI and MkDocs Integration
+
+### Prompt
+How to run `mkdocs serve` and FastAPI process together on the same port?
+
+#### Solution Implemented
+1. Modify FastAPI app to serve MkDocs content using StaticFiles
+2. Key code changes:
+   ```python
+   app.mount("/", StaticFiles(directory="site", html=True), name="site")
+   ```
+
+#### Implementation Steps
+1. Build MkDocs site:
+   ```bash
+   mkdocs build
+   ```
+2. Configure mkdocs.yml:
+   ```yaml
+   site_url: http://localhost:8000/
+   ```
+3. Run FastAPI application:
+   ```bash
+   uvicorn api.main:app --reload
+   ```
+
+#### Result
+- API endpoints available at `/api/...`
+- Documentation served at root URL `/`
+- Single server handling both services
+
+## Notes
+- Remember to rebuild MkDocs when documentation changes
+- Consider using file watcher or supervisor for development
+- Production might benefit from reverse proxy setup
