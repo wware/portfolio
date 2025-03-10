@@ -1,6 +1,6 @@
 site_name: Science Museum Portfolio
-# site_url: https://wware.github.io
-site_url: http://localhost:8000/
+site_url: https://wware.github.io/portfolio/
+# site_url: http://localhost:8000/
 
 theme:
   name: material
