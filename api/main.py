@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import uvicorn
 
 app = FastAPI()
 
@@ -33,5 +34,11 @@ async def create_item(item: Item):
     return {"message": "Item created", "item": item}
 
 # Mount the MkDocs static site
-# This assumes you've built the MkDocs site using 'mkdocs build'
+import os
+os.system("mkdocs build")
 app.mount("/", StaticFiles(directory="site", html=True), name="site")
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000,
+                ssl_keyfile="key.pem", 
+                ssl_certfile="cert.pem")

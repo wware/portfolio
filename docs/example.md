@@ -5,7 +5,17 @@ a static site that can also have dynamic content. Here are
 some FastAPI routes:
 
 ```python
---8<-- "api/main.py:21:33"
+--8<-- "api/main.py:22:34"
+```
+
+And here is where we use it.
+
+```html
+--8<-- "docs/example.md:24:42"
+```
+
+```javascript
+--8<-- "docs/javascripts/extra.js"
 ```
 
 Here's a demo of a list of items that we fetch from the FastAPI
@@ -29,4 +39,4 @@ function addItem3() {
     })
     .then(() => do_fetch());  // Refresh the list after adding
 }
-</script> 
+</script>

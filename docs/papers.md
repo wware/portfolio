@@ -1,4 +1,5 @@
-# Papers?
+# Papers, kinda I guess
 
-What papers are we talking about here?
-
+* 🔗 [Harvard extension courses](courses.md)
+* 🔗 [APIs and dynamic content](api.md)
+* 🔗 [Security and user authentication](auth.md)
