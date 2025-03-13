@@ -318,7 +318,7 @@ async def read_root(request: Request):
 <details>
     <summary>Client side code in HTML and JavaScript</summary>
 
-```
+```html
 <!-- 
 templates/index.html
 This is a simple client-side implementation of WebAuthn for your FastAPI application.

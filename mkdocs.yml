@@ -19,18 +19,22 @@ theme:
       primary: indigo
       accent: pink
 
-markdown_extensions:
-  - pymdownx.superfences
-  - pymdownx.snippets
-  - mdx_math
+plugins:
+  - search
 
 extra_javascript:
   - javascripts/extra.js
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
-plugins:
-  - search
-  - mermaid2
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets
+  - mdx_math
 
 nav:
   - Home: index.md
