@@ -22,9 +22,11 @@ theme:
 markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets
+  - mdx_math
 
 extra_javascript:
   - javascripts/extra.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 plugins:
   - search

@@ -45,6 +45,7 @@ pymdown-extensions==10.14.3
 pyotp==2.9.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
+python-markdown-math==0.8
 python-multipart==0.0.20
 PyYAML==6.0.2
 pyyaml_env_tag==0.1
